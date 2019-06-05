@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{41E9BC51-CBD5-43FC-A7C1-014B9EB9EB89}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SampleApp</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\Code\C++\Learn-AVS-DEVICE-SDK\avs-device-sdk\SampleApp\SampleApp\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\Code\C++\Learn-AVS-DEVICE-SDK\avs-device-sdk\SampleApp\SampleApp\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Code\C++\Learn-AVS-DEVICE-SDK\avs-device-sdk\SampleApp\SampleApp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Code\C++\Learn-AVS-DEVICE-SDK\avs-device-sdk\SampleApp\SampleApp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ACL\AVSConnectionManager.h" />
+    <ClInclude Include="include\ACL\Transport\DownchannelHandler.h" />
+    <ClInclude Include="include\ACL\Transport\ExchangeHandler.h" />
+    <ClInclude Include="include\ACL\Transport\ExchangeHandlerContextInterface.h" />
+    <ClInclude Include="include\ACL\Transport\HTTP2Transport.h" />
+    <ClInclude Include="include\ACL\Transport\HTTP2TransportFactory.h" />
+    <ClInclude Include="include\ACL\Transport\MessageConsumerInterface.h" />
+    <ClInclude Include="include\ACL\Transport\MessageRequestHandler.h" />
+    <ClInclude Include="include\ACL\Transport\MessageRouter.h" />
+    <ClInclude Include="include\ACL\Transport\MessageRouterInterface.h" />
+    <ClInclude Include="include\ACL\Transport\MessageRouterObserverInterface.h" />
+    <ClInclude Include="include\ACL\Transport\MimeResponseSink.h" />
+    <ClInclude Include="include\ACL\Transport\MimeResponseStatusHandlerInterface.h" />
+    <ClInclude Include="include\ACL\Transport\PingHandler.h" />
+    <ClInclude Include="include\ACL\Transport\PostConnectFactoryInterface.h" />
+    <ClInclude Include="include\ACL\Transport\PostConnectInterface.h" />
+    <ClInclude Include="include\ACL\Transport\PostConnectObserverInterface.h" />
+    <ClInclude Include="include\ACL\Transport\PostConnectSendMessageInterface.h" />
+    <ClInclude Include="include\ACL\Transport\PostConnectSynchronizer.h" />
+    <ClInclude Include="include\ACL\Transport\PostConnectSynchronizerFactory.h" />
+    <ClInclude Include="include\ACL\Transport\TransportDefines.h" />
+    <ClInclude Include="include\ACL\Transport\TransportFactoryInterface.h" />
+    <ClInclude Include="include\ACL\Transport\TransportInterface.h" />
+    <ClInclude Include="include\ACL\Transport\TransportObserverInterface.h" />
+    <ClInclude Include="include\ADSL\DirectiveProcessor.h" />
+    <ClInclude Include="include\ADSL\DirectiveRouter.h" />
+    <ClInclude Include="include\ADSL\DirectiveSequencer.h" />
+    <ClInclude Include="include\ADSL\MessageInterpreter.h" />
+    <ClInclude Include="include\AFML\ActivityTrackerInterface.h" />
+    <ClInclude Include="include\AFML\AudioActivityTracker.h" />
+    <ClInclude Include="include\AFML\Channel.h" />
+    <ClInclude Include="include\AFML\FocusManager.h" />
+    <ClInclude Include="include\AFML\VisualActivityTracker.h" />
+    <ClInclude Include="include\AIP\ASRProfile.h" />
+    <ClInclude Include="include\AIP\AudioInputProcessor.h" />
+    <ClInclude Include="include\AIP\AudioProvider.h" />
+    <ClInclude Include="include\AIP\ESPData.h" />
+    <ClInclude Include="include\AIP\Initiator.h" />
+    <ClInclude Include="include\Alerts\Alarm.h" />
+    <ClInclude Include="include\Alerts\Alert.h" />
+    <ClInclude Include="include\Alerts\AlertObserverInterface.h" />
+    <ClInclude Include="include\Alerts\AlertsCapabilityAgent.h" />
+    <ClInclude Include="include\Alerts\AlertScheduler.h" />
+    <ClInclude Include="include\Alerts\Reminder.h" />
+    <ClInclude Include="include\Alerts\Renderer\Renderer.h" />
+    <ClInclude Include="include\Alerts\Renderer\RendererInterface.h" />
+    <ClInclude Include="include\Alerts\Renderer\RendererObserverInterface.h" />
+    <ClInclude Include="include\Alerts\Storage\AlertStorageInterface.h" />
+    <ClInclude Include="include\Alerts\Storage\SQLiteAlertStorage.h" />
+    <ClInclude Include="include\Alerts\Timer.h" />
+    <ClInclude Include="include\AndroidSLESMediaPlayer\AndroidSLESMediaPlayer.h" />
+    <ClInclude Include="include\AndroidSLESMediaPlayer\AndroidSLESMediaQueue.h" />
+    <ClInclude Include="include\AndroidSLESMediaPlayer\AndroidSLESSpeaker.h" />
+    <ClInclude Include="include\AndroidSLESMediaPlayer\DecoderInterface.h" />
+    <ClInclude Include="include\AndroidSLESMediaPlayer\FFmpegAttachmentInputController.h" />
+    <ClInclude Include="include\AndroidSLESMediaPlayer\FFmpegDecoder.h" />
+    <ClInclude Include="include\AndroidSLESMediaPlayer\FFmpegDeleter.h" />
+    <ClInclude Include="include\AndroidSLESMediaPlayer\FFmpegInputControllerInterface.h" />
+    <ClInclude Include="include\AndroidSLESMediaPlayer\FFmpegStreamInputController.h" />
+    <ClInclude Include="include\AndroidSLESMediaPlayer\FFmpegUrlInputController.h" />
+    <ClInclude Include="include\AndroidSLESMediaPlayer\PlaybackConfiguration.h" />
+    <ClInclude Include="include\AndroidUtilities\AndroidLogger.h" />
+    <ClInclude Include="include\AndroidUtilities\AndroidSLESBufferQueue.h" />
+    <ClInclude Include="include\AndroidUtilities\AndroidSLESEngine.h" />
+    <ClInclude Include="include\AndroidUtilities\AndroidSLESMicrophone.h" />
+    <ClInclude Include="include\AndroidUtilities\AndroidSLESObject.h" />
+    <ClInclude Include="include\AudioPlayer\AudioItem.h" />
+    <ClInclude Include="include\AudioPlayer\AudioPlayer.h" />
+    <ClInclude Include="include\AudioPlayer\ClearBehavior.h" />
+    <ClInclude Include="include\AudioPlayer\ErrorType.h" />
+    <ClInclude Include="include\AudioPlayer\PlayBehavior.h" />
+    <ClInclude Include="include\AudioPlayer\ProgressTimer.h" />
+    <ClInclude Include="include\AudioPlayer\StreamFormat.h" />
+    <ClInclude Include="include\Audio\AlertsAudioFactory.h" />
+    <ClInclude Include="include\Audio\AudioFactory.h" />
+    <ClInclude Include="include\Audio\CommunicationsAudioFactory.h" />
+    <ClInclude Include="include\Audio\Data\med_alerts_notification_01._TTH_.mp3.h" />
+    <ClInclude Include="include\Audio\Data\med_system_alerts_melodic_01._TTH_.mp3.h" />
+    <ClInclude Include="include\Audio\Data\med_system_alerts_melodic_01_short._TTH_.wav.h" />
+    <ClInclude Include="include\Audio\Data\med_system_alerts_melodic_02._TTH_.mp3.h" />
+    <ClInclude Include="include\Audio\Data\med_system_alerts_melodic_02_short._TTH_.wav.h" />
+    <ClInclude Include="include\Audio\Data\system_comm_call_connected_.mp3.h" />
+    <ClInclude Include="include\Audio\Data\system_comm_call_disconnected_.mp3.h" />
+    <ClInclude Include="include\Audio\Data\system_comm_call_incoming_ringtone_intro_.mp3.h" />
+    <ClInclude Include="include\Audio\Data\system_comm_drop_in_connected_.mp3.h" />
+    <ClInclude Include="include\Audio\Data\system_comm_outbound_ringtone_.mp3.h" />
+    <ClInclude Include="include\Audio\MicrophoneInterface.h" />
+    <ClInclude Include="include\Audio\NotificationsAudioFactory.h" />
+    <ClInclude Include="include\AVSCommon\AVS\AbstractAVSConnectionManager.h" />
+    <ClInclude Include="include\AVSCommon\AVS\Attachment\Attachment.h" />
+    <ClInclude Include="include\AVSCommon\AVS\Attachment\AttachmentManager.h" />
+    <ClInclude Include="include\AVSCommon\AVS\Attachment\AttachmentManagerInterface.h" />
+    <ClInclude Include="include\AVSCommon\AVS\Attachment\AttachmentReader.h" />
+    <ClInclude Include="include\AVSCommon\AVS\Attachment\AttachmentUtils.h" />
+    <ClInclude Include="include\AVSCommon\AVS\Attachment\AttachmentWriter.h" />
+    <ClInclude Include="include\AVSCommon\AVS\Attachment\InProcessAttachment.h" />
+    <ClInclude Include="include\AVSCommon\AVS\Attachment\InProcessAttachmentReader.h" />
+    <ClInclude Include="include\AVSCommon\AVS\Attachment\InProcessAttachmentWriter.h" />
+    <ClInclude Include="include\AVSCommon\AVS\AudioInputStream.h" />
+    <ClInclude Include="include\AVSCommon\AVS\AVSDirective.h" />
+    <ClInclude Include="include\AVSCommon\AVS\AVSMessage.h" />
+    <ClInclude Include="include\AVSCommon\AVS\AVSMessageHeader.h" />
+    <ClInclude Include="include\AVSCommon\AVS\BlockingPolicy.h" />
+    <ClInclude Include="include\AVSCommon\AVS\CapabilityAgent.h" />
+    <ClInclude Include="include\AVSCommon\AVS\CapabilityConfiguration.h" />
+    <ClInclude Include="include\AVSCommon\AVS\DialogUXStateAggregator.h" />
+    <ClInclude Include="include\AVSCommon\AVS\DirectiveHandlerConfiguration.h" />
+    <ClInclude Include="include\AVSCommon\AVS\EventBuilder.h" />
+    <ClInclude Include="include\AVSCommon\AVS\ExceptionEncounteredSender.h" />
+    <ClInclude Include="include\AVSCommon\AVS\ExceptionErrorType.h" />
+    <ClInclude Include="include\AVSCommon\AVS\ExternalMediaPlayer\AdapterUtils.h" />
+    <ClInclude Include="include\AVSCommon\AVS\ExternalMediaPlayer\ExternalMediaAdapterConstants.h" />
+    <ClInclude Include="include\AVSCommon\AVS\FocusState.h" />
+    <ClInclude Include="include\AVSCommon\AVS\HandlerAndPolicy.h" />
+    <ClInclude Include="include\AVSCommon\AVS\IndicatorState.h" />
+    <ClInclude Include="include\AVSCommon\AVS\Initialization\AlexaClientSDKInit.h" />
+    <ClInclude Include="include\AVSCommon\AVS\MessageRequest.h" />
+    <ClInclude Include="include\AVSCommon\AVS\NamespaceAndName.h" />
+    <ClInclude Include="include\AVSCommon\AVS\PlaybackButtons.h" />
+    <ClInclude Include="include\AVSCommon\AVS\PlayerActivity.h" />
+    <ClInclude Include="include\AVSCommon\AVS\Requester.h" />
+    <ClInclude Include="include\AVSCommon\AVS\SpeakerConstants\SpeakerConstants.h" />
+    <ClInclude Include="include\AVSCommon\AVS\StateRefreshPolicy.h" />
+    <ClInclude Include="include\Bluetooth\Bluetooth.h" />
+    <ClInclude Include="include\Bluetooth\BluetoothAVRCPTransformer.h" />
+    <ClInclude Include="include\Bluetooth\BluetoothStorageInterface.h" />
+    <ClInclude Include="include\Bluetooth\SQLiteBluetoothStorage.h" />
+    <ClInclude Include="include\BlueZ\BlueZA2DPSink.h" />
+    <ClInclude Include="include\BlueZ\BlueZA2DPSource.h" />
+    <ClInclude Include="include\BlueZ\BlueZAVRCPController.h" />
+    <ClInclude Include="include\BlueZ\BlueZAVRCPTarget.h" />
+    <ClInclude Include="include\BlueZ\BlueZBluetoothDevice.h" />
+    <ClInclude Include="include\BlueZ\BlueZBluetoothDeviceManager.h" />
+    <ClInclude Include="include\BlueZ\BlueZConstants.h" />
+    <ClInclude Include="include\BlueZ\BlueZDeviceManager.h" />
+    <ClInclude Include="include\BlueZ\BlueZHostController.h" />
+    <ClInclude Include="include\BlueZ\BlueZUtils.h" />
+    <ClInclude Include="include\BlueZ\DBusConnection.h" />
+    <ClInclude Include="include\BlueZ\DBusObject.h" />
+    <ClInclude Include="include\BlueZ\DBusObjectBase.h" />
+    <ClInclude Include="include\BlueZ\DBusPropertiesProxy.h" />
+    <ClInclude Include="include\BlueZ\DBusProxy.h" />
+    <ClInclude Include="include\BlueZ\GVariantMapReader.h" />
+    <ClInclude Include="include\BlueZ\GVariantTupleReader.h" />
+    <ClInclude Include="include\BlueZ\ManagedGError.h" />
+    <ClInclude Include="include\BlueZ\ManagedGVariant.h" />
+    <ClInclude Include="include\BlueZ\MediaContext.h" />
+    <ClInclude Include="include\BlueZ\MediaEndpoint.h" />
+    <ClInclude Include="include\BlueZ\MPRISPlayer.h" />
+    <ClInclude Include="include\BlueZ\PairingAgent.h" />
+    <ClInclude Include="include\BlueZ\PulseAudioBluetoothInitializer.h" />
+    <ClInclude Include="include\CapabilitiesDelegate\CapabilitiesDelegate.h" />
+    <ClInclude Include="include\CBLAuthDelegate\CBLAuthDelegate.h" />
+    <ClInclude Include="include\CBLAuthDelegate\CBLAuthDelegateConfiguration.h" />
+    <ClInclude Include="include\CBLAuthDelegate\CBLAuthDelegateStorageInterface.h" />
+    <ClInclude Include="include\CBLAuthDelegate\CBLAuthRequesterInterface.h" />
+    <ClInclude Include="include\CBLAuthDelegate\SQLiteCBLAuthDelegateStorage.h" />
+    <ClInclude Include="include\CertifiedSender\CertifiedSender.h" />
+    <ClInclude Include="include\CertifiedSender\MessageStorageInterface.h" />
+    <ClInclude Include="include\CertifiedSender\SQLiteMessageStorage.h" />
+    <ClInclude Include="include\ContextManager\ContextManager.h" />
+    <ClInclude Include="include\DefaultClient\DefaultClient.h" />
+    <ClInclude Include="include\DefaultClient\EqualizerRuntimeSetup.h" />
+    <ClInclude Include="include\DoNotDisturbCA\DNDMessageRequest.h" />
+    <ClInclude Include="include\DoNotDisturbCA\DNDSettingProtocol.h" />
+    <ClInclude Include="include\DoNotDisturbCA\DoNotDisturbCapabilityAgent.h" />
+    <ClInclude Include="include\EqualizerImplementations\EqualizerBandMapperInterface.h" />
+    <ClInclude Include="include\EqualizerImplementations\EqualizerController.h" />
+    <ClInclude Include="include\EqualizerImplementations\EqualizerLinearBandMapper.h" />
+    <ClInclude Include="include\EqualizerImplementations\EqualizerUtils.h" />
+    <ClInclude Include="include\EqualizerImplementations\InMemoryEqualizerConfiguration.h" />
+    <ClInclude Include="include\EqualizerImplementations\MiscDBEqualizerStorage.h" />
+    <ClInclude Include="include\EqualizerImplementations\SDKConfigEqualizerConfiguration.h" />
+    <ClInclude Include="include\Equalizer\EqualizerCapabilityAgent.h" />
+    <ClInclude Include="include\ESP\DummyESPDataProvider.h" />
+    <ClInclude Include="include\ESP\ESPDataModifierInterface.h" />
+    <ClInclude Include="include\ESP\ESPDataProvider.h" />
+    <ClInclude Include="include\ESP\ESPDataProviderInterface.h" />
+    <ClInclude Include="include\ExternalMediaPlayer\ExternalMediaPlayer.h" />
+    <ClInclude Include="include\gmock\gmock-actions.h" />
+    <ClInclude Include="include\gmock\gmock-cardinalities.h" />
+    <ClInclude Include="include\gmock\gmock-generated-actions.h" />
+    <ClInclude Include="include\gmock\gmock-generated-function-mockers.h" />
+    <ClInclude Include="include\gmock\gmock-generated-matchers.h" />
+    <ClInclude Include="include\gmock\gmock-generated-nice-strict.h" />
+    <ClInclude Include="include\gmock\gmock-matchers.h" />
+    <ClInclude Include="include\gmock\gmock-more-actions.h" />
+    <ClInclude Include="include\gmock\gmock-more-matchers.h" />
+    <ClInclude Include="include\gmock\gmock-spec-builders.h" />
+    <ClInclude Include="include\gmock\gmock.h" />
+    <ClInclude Include="include\gmock\internal\custom\gmock-generated-actions.h" />
+    <ClInclude Include="include\gmock\internal\custom\gmock-matchers.h" />
+    <ClInclude Include="include\gmock\internal\custom\gmock-port.h" />
+    <ClInclude Include="include\gmock\internal\gmock-generated-internal-utils.h" />
+    <ClInclude Include="include\gmock\internal\gmock-internal-utils.h" />
+    <ClInclude Include="include\gmock\internal\gmock-port.h" />
+    <ClInclude Include="include\gtest\gtest-death-test.h" />
+    <ClInclude Include="include\gtest\gtest-message.h" />
+    <ClInclude Include="include\gtest\gtest-param-test.h" />
+    <ClInclude Include="include\gtest\gtest-printers.h" />
+    <ClInclude Include="include\gtest\gtest-spi.h" />
+    <ClInclude Include="include\gtest\gtest-test-part.h" />
+    <ClInclude Include="include\gtest\gtest-typed-test.h" />
+    <ClInclude Include="include\gtest\gtest.h" />
+    <ClInclude Include="include\gtest\gtest_pred_impl.h" />
+    <ClInclude Include="include\gtest\gtest_prod.h" />
+    <ClInclude Include="include\gtest\internal\custom\gtest-port.h" />
+    <ClInclude Include="include\gtest\internal\custom\gtest-printers.h" />
+    <ClInclude Include="include\gtest\internal\custom\gtest.h" />
+    <ClInclude Include="include\gtest\internal\gtest-death-test-internal.h" />
+    <ClInclude Include="include\gtest\internal\gtest-filepath.h" />
+    <ClInclude Include="include\gtest\internal\gtest-internal.h" />
+    <ClInclude Include="include\gtest\internal\gtest-linked_ptr.h" />
+    <ClInclude Include="include\gtest\internal\gtest-param-util-generated.h" />
+    <ClInclude Include="include\gtest\internal\gtest-param-util.h" />
+    <ClInclude Include="include\gtest\internal\gtest-port-arch.h" />
+    <ClInclude Include="include\gtest\internal\gtest-port.h" />
+    <ClInclude Include="include\gtest\internal\gtest-string.h" />
+    <ClInclude Include="include\gtest\internal\gtest-tuple.h" />
+    <ClInclude Include="include\gtest\internal\gtest-type-util.h" />
+    <ClInclude Include="include\Integration\ACLTestContext.h" />
+    <ClInclude Include="include\Integration\AipStateObserver.h" />
+    <ClInclude Include="include\Integration\AuthDelegateTestContext.h" />
+    <ClInclude Include="include\Integration\AuthObserver.h" />
+    <ClInclude Include="include\Integration\ClientMessageHandler.h" />
+    <ClInclude Include="include\Integration\ConnectionStatusObserver.h" />
+    <ClInclude Include="include\Integration\JsonHeader.h" />
+    <ClInclude Include="include\Integration\ObservableMessageRequest.h" />
+    <ClInclude Include="include\Integration\SDKTestContext.h" />
+    <ClInclude Include="include\Integration\TestAlertObserver.h" />
+    <ClInclude Include="include\Integration\TestDirectiveHandler.h" />
+    <ClInclude Include="include\Integration\TestExceptionEncounteredSender.h" />
+    <ClInclude Include="include\Integration\TestMediaPlayer.h" />
+    <ClInclude Include="include\Integration\TestMessageSender.h" />
+    <ClInclude Include="include\Integration\TestSpeechSynthesizerObserver.h" />
+    <ClInclude Include="include\InteractionModel\InteractionModelCapabilityAgent.h" />
+    <ClInclude Include="include\KittAi\KittAiKeyWordDetector.h" />
+    <ClInclude Include="include\KittAi\SnowboyWrapper.h" />
+    <ClInclude Include="include\KWDProvider\KeywordDetectorProvider.h" />
+    <ClInclude Include="include\KWD\AbstractKeywordDetector.h" />
+    <ClInclude Include="include\MediaPlayer\AttachmentReaderSource.h" />
+    <ClInclude Include="include\MediaPlayer\BaseStreamSource.h" />
+    <ClInclude Include="include\MediaPlayer\ErrorTypeConversion.h" />
+    <ClInclude Include="include\MediaPlayer\IStreamSource.h" />
+    <ClInclude Include="include\MediaPlayer\MediaPlayer.h" />
+    <ClInclude Include="include\MediaPlayer\Normalizer.h" />
+    <ClInclude Include="include\MediaPlayer\OffsetManager.h" />
+    <ClInclude Include="include\MediaPlayer\PipelineInterface.h" />
+    <ClInclude Include="include\MediaPlayer\SourceInterface.h" />
+    <ClInclude Include="include\MockDBusProxy.h" />
+    <ClInclude Include="include\MRM\MRMCapabilityAgent.h" />
+    <ClInclude Include="include\MRM\MRMHandlerInterface.h" />
+    <ClInclude Include="include\Notifications\IndicatorState.h" />
+    <ClInclude Include="include\Notifications\NotificationIndicator.h" />
+    <ClInclude Include="include\Notifications\NotificationRenderer.h" />
+    <ClInclude Include="include\Notifications\NotificationRendererInterface.h" />
+    <ClInclude Include="include\Notifications\NotificationRendererObserverInterface.h" />
+    <ClInclude Include="include\Notifications\NotificationsCapabilityAgent.h" />
+    <ClInclude Include="include\Notifications\NotificationsCapabilityAgentState.h" />
+    <ClInclude Include="include\Notifications\NotificationsStorageInterface.h" />
+    <ClInclude Include="include\Notifications\SQLiteNotificationsStorage.h" />
+    <ClInclude Include="include\PlaybackController\PlaybackCommand.h" />
+    <ClInclude Include="include\PlaybackController\PlaybackController.h" />
+    <ClInclude Include="include\PlaybackController\PlaybackMessageRequest.h" />
+    <ClInclude Include="include\PlaybackController\PlaybackRouter.h" />
+    <ClInclude Include="include\PlaylistParser\ContentDecrypter.h" />
+    <ClInclude Include="include\PlaylistParser\FFMpegInputBuffer.h" />
+    <ClInclude Include="include\PlaylistParser\IterativePlaylistParser.h" />
+    <ClInclude Include="include\PlaylistParser\M3UParser.h" />
+    <ClInclude Include="include\PlaylistParser\PlaylistParser.h" />
+    <ClInclude Include="include\PlaylistParser\PlaylistUtils.h" />
+    <ClInclude Include="include\PlaylistParser\UrlContentToAttachmentConverter.h" />
+    <ClInclude Include="include\rapidjson\allocators.h" />
+    <ClInclude Include="include\rapidjson\document.h" />
+    <ClInclude Include="include\rapidjson\encodedstream.h" />
+    <ClInclude Include="include\rapidjson\encodings.h" />
+    <ClInclude Include="include\rapidjson\error\en.h" />
+    <ClInclude Include="include\rapidjson\error\error.h" />
+    <ClInclude Include="include\rapidjson\filereadstream.h" />
+    <ClInclude Include="include\rapidjson\filewritestream.h" />
+    <ClInclude Include="include\rapidjson\fwd.h" />
+    <ClInclude Include="include\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="include\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="include\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="include\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="include\rapidjson\internal\itoa.h" />
+    <ClInclude Include="include\rapidjson\internal\meta.h" />
+    <ClInclude Include="include\rapidjson\internal\pow10.h" />
+    <ClInclude Include="include\rapidjson\internal\regex.h" />
+    <ClInclude Include="include\rapidjson\internal\stack.h" />
+    <ClInclude Include="include\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="include\rapidjson\internal\strtod.h" />
+    <ClInclude Include="include\rapidjson\internal\swap.h" />
+    <ClInclude Include="include\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="include\rapidjson\memorybuffer.h" />
+    <ClInclude Include="include\rapidjson\memorystream.h" />
+    <ClInclude Include="include\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="include\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="include\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="include\rapidjson\pointer.h" />
+    <ClInclude Include="include\rapidjson\prettywriter.h" />
+    <ClInclude Include="include\rapidjson\rapidjson.h" />
+    <ClInclude Include="include\rapidjson\reader.h" />
+    <ClInclude Include="include\rapidjson\schema.h" />
+    <ClInclude Include="include\rapidjson\stream.h" />
+    <ClInclude Include="include\rapidjson\stringbuffer.h" />
+    <ClInclude Include="include\rapidjson\writer.h" />
+    <ClInclude Include="include\RegistrationManager\CustomerDataHandler.h" />
+    <ClInclude Include="include\RegistrationManager\CustomerDataManager.h" />
+    <ClInclude Include="include\RegistrationManager\RegistrationManager.h" />
+    <ClInclude Include="include\RegistrationManager\RegistrationObserverInterface.h" />
+    <ClInclude Include="include\SampleApp\ConnectionObserver.h" />
+    <ClInclude Include="include\SampleApp\ConsolePrinter.h" />
+    <ClInclude Include="include\SampleApp\ConsoleReader.h" />
+    <ClInclude Include="include\SampleApp\GuiRenderer.h" />
+    <ClInclude Include="include\SampleApp\InteractionManager.h" />
+    <ClInclude Include="include\SampleApp\KeywordObserver.h" />
+    <ClInclude Include="include\SampleApp\PortAudioMicrophoneWrapper.h" />
+    <ClInclude Include="include\SampleApp\RevokeAuthorizationObserver.h" />
+    <ClInclude Include="include\SampleApp\SampleApplication.h" />
+    <ClInclude Include="include\SampleApp\SampleApplicationReturnCodes.h" />
+    <ClInclude Include="include\SampleApp\SampleEqualizerModeController.h" />
+    <ClInclude Include="include\SampleApp\UIManager.h" />
+    <ClInclude Include="include\SampleApp\UserInputManager.h" />
+    <ClInclude Include="include\Sensory\SensoryKeywordDetector.h" />
+    <ClInclude Include="include\Settings\Settings.h" />
+    <ClInclude Include="include\Settings\SettingsStorageInterface.h" />
+    <ClInclude Include="include\Settings\SettingsUpdatedEventSender.h" />
+    <ClInclude Include="include\Settings\SQLiteSettingStorage.h" />
+    <ClInclude Include="include\SpeakerManager\SpeakerManager.h" />
+    <ClInclude Include="include\SpeakerManager\SpeakerManagerConstants.h" />
+    <ClInclude Include="include\SpeechEncoder\EncoderContext.h" />
+    <ClInclude Include="include\SpeechEncoder\SpeechEncoder.h" />
+    <ClInclude Include="include\SpeechSynthesizer\SpeechSynthesizer.h" />
+    <ClInclude Include="include\SQLiteStorage\SQLiteDatabase.h" />
+    <ClInclude Include="include\SQLiteStorage\SQLiteMiscStorage.h" />
+    <ClInclude Include="include\SQLiteStorage\SQLiteStatement.h" />
+    <ClInclude Include="include\SQLiteStorage\SQLiteUtils.h" />
+    <ClInclude Include="include\System\EndpointHandler.h" />
+    <ClInclude Include="include\System\RevokeAuthorizationHandler.h" />
+    <ClInclude Include="include\System\SoftwareInfoSender.h" />
+    <ClInclude Include="include\System\SoftwareInfoSendRequest.h" />
+    <ClInclude Include="include\System\SystemCapabilityProvider.h" />
+    <ClInclude Include="include\System\UserInactivityMonitor.h" />
+    <ClInclude Include="include\TemplateRuntime\TemplateRuntime.h" />
+    <ClInclude Include="myTest.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="SampleApp.cpp" />
+    <ClCompile Include="SampleApplication.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
